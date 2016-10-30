@@ -1,7 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roman
- * Date: 30.10.16
- * Time: 21:30
- */
+
+namespace Roman\Parser;
+
+use Roman\Parser\Init\InitClass as Init;
+
+class Parser
+{
+    public function __construct($folderpath)
+    {
+        $init = new Init($folderpath);
+        $mkd = $init->makeUploadFolder();
+        if (!$mkd) {
+            echo 'Error!!!';
+        }
+    }
+}
