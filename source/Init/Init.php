@@ -2,8 +2,7 @@
 
 namespace Roman\Parser\Init;
 
-
-interface InitInterface
+interface Init
 {
     /*
      * @notice create folder for xml file

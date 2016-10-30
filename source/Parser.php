@@ -3,8 +3,8 @@
 namespace Roman\Parser;
 
 use Roman\Parser\Init\InitClass as Init;
-
-class Parser
+use Roman\Parser\Log\Log as Log;
+class Parser extends Log
 {
     public function __construct($folderpath)
     {
@@ -14,4 +14,5 @@ class Parser
             echo 'Error!!!';
         }
     }
+
 }

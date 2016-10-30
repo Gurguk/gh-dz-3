@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roman
- * Date: 30.10.16
- * Time: 23:19
- */
 
 namespace Roman\Parser\Init;
 
 
-class InitClass implements InitInterface
+class InitClass implements Init
 {
     /*
     * @var path to folder
