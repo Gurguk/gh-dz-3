@@ -5,16 +5,9 @@ namespace Roman\Parser\Log;
 
 abstract class Log
 {
-    private $logfile;
-
-    public function __construct($logfile)
+    public function writeLog($logfile, $text)
     {
-        $this->logfile = $logfile;
-    }
-
-    public function writeLog($text)
-    {
-        $fp = fopen($this->logfile,'rw');
+        $fp = fopen($logfile,'rw');
         fwrite($fp,$text.PHP_EOL);
         fclose($fp);
     }
