@@ -4,6 +4,7 @@ namespace Roman\Parser;
 
 use Roman\Parser\Init\InitClass as Init;
 use Roman\Parser\Log\Log as Log;
+
 class Parser extends Log
 {
     use ExampleTrait;
@@ -11,7 +12,7 @@ class Parser extends Log
     public $logfile;
     public $folderpath;
 
-    public function __construct($folderpath,$logfile)
+    public function __construct($folderpath, $logfile)
     {
         $this->logfile = $logfile;
         $this->folderpath = $folderpath;
@@ -34,19 +35,18 @@ class Parser extends Log
 
     private function startParse()
     {
-        // Some code
+        $xml = simplexml_load_file($this->folderpath.'/xml.xml');
+        $this->finishParse($xml);
     }
 
-    private function finishParse()
+    private function finishParse($xml)
     {
-        // Some code
+        var_dump($xml);
     }
 
     public function parseXML()
     {
         $this->getPostData();
         $this->startParse();
-        $this->finishParse();
     }
-
 }
